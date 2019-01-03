@@ -1,6 +1,7 @@
 import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
+import './../style/Login.css';
 
 class Login extends React.Component {
     state = {
@@ -40,20 +41,19 @@ class Login extends React.Component {
             return (
                 <div>
                     <h1>Temper</h1>
-                    <p>Please sign-in:</p>
                     <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}/>
                 </div>
             );
         }
         return (
-            <div>
-                <h1>Temper</h1>
-                <p>Welcome {firebase.auth().currentUser.displayName}!
-                    <br/>
-                    You are now signed-in!</p>
-                <a onClick={() => {
-                    firebase.auth().signOut();
-                }}>Sign-out</a>
+            <div className="Login">
+                <ul>
+                    <li>Welcome {firebase.auth().currentUser.displayName}!</li>
+                    <li className="center">Temper</li>
+                    <li className="right"><button onClick={() => {
+                        firebase.auth().signOut();
+                    }}>Sign-out</button></li>
+                </ul>
             </div>
         );
     }

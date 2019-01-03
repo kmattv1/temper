@@ -1,0 +1,42 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-size: calc(10px + 2vmin);
+}
+
+li {
+    display: block;
+    float: left;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+li button {
+    font-size: calc(10px + 2vmin);
+    border-radius: 25px;
+    color: #61dafb;
+    background-color: #333;
+    float: right;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li button:hover {
+    background-color: #111;
+}
+
+li.center{
+    float: left;
+    margin-left: 20%;
+}
+
+li.right{
+    float: right;
+}
+
